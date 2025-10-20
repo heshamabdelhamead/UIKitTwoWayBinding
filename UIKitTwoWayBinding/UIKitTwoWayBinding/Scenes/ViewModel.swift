@@ -9,6 +9,5 @@ import Foundation
 import Combine
 
 class ViewModel  {
-    var text = CurrentValueSubject<String,Never>("Hello, World!")
-// @Published   var text = "Hello, World!"
+ @Published   var text = "Hello, World!"
 }

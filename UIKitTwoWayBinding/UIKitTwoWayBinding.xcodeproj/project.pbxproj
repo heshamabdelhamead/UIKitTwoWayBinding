@@ -14,7 +14,7 @@
 		6A9090F22EA6071A008BE4DB /* Exceptions for "UIKitTwoWayBinding" folder in "UIKitTwoWayBinding" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Resources/Info.plist,
+				Info.plist,
 			);
 			target = 6A9090DF2EA60718008BE4DB /* UIKitTwoWayBinding */;
 		};

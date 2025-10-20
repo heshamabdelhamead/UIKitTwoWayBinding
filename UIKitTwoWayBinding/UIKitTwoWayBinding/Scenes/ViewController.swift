@@ -22,19 +22,19 @@ class ViewController: UIViewController {
     }
     
     private  func setupView(){
-        viewModel.text.sink(receiveValue: { [weak self] text in
+        viewModel.$text.sink(receiveValue: { [weak self] text in
             DispatchQueue.main.async{
                 self?.label.text = text
             }
         })
         .store(in: &cancellables)
-        textField.bind(to: viewModel.text.eraseToAnyPublisher() , storeIn: &cancellables) { [weak self]  value in
-            self?.viewModel.text.value = value
+        textField.bind(to: viewModel.$text.eraseToAnyPublisher() , storeIn: &cancellables) { [weak self]  value in
+            self?.viewModel.text = value
         }
     }
     
     @IBAction func clear(_ sender: Any) {
-        viewModel.text.value = ""
+        viewModel.text = ""
     }
 }
 
